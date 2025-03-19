@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Restaurant</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .card {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card-img-top {
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .payment-section {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Restaurant</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./Menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="./About.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="./Contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Menu Section -->
+  <section id="menu" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Menu</h2>
+      <div class="row">
+        <!-- Dish 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="./images/chicken.jpg" class="card-img-top" alt="Chicken Alfredo">
+            <div class="card-body">
+              <h5 class="card-title">Chicken Alfredo</h5>
+              <p class="card-text">A creamy, cheesy pasta dish served with tender grilled chicken.</p>
+              <p><strong>Price: ₹250</strong></p>
+              <button class="btn btn-danger order-now" data-price="250">Order Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- Dish 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="./images/pizza.jpg" class="card-img-top" alt="Margherita Pizza">
+            <div class="card-body">
+              <h5 class="card-title">Margherita Pizza</h5>
+              <p class="card-text">A classic pizza topped with fresh mozzarella, basil, and rich tomato sauce.</p>
+              <p><strong>Price: ₹300</strong></p>
+              <button class="btn btn-danger order-now" data-price="300">Order Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- Dish 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="./images/dosa.jpg" class="card-img-top" alt="Roast">
+            <div class="card-body">
+              <h5 class="card-title">Caesar Salad</h5>
+              <p class="card-text">Fresh Romaine lettuce, croutons, and a creamy Caesar dressing.</p>
+              <p><strong>Price: ₹180</strong></p>
+              <button class="btn btn-danger order-now" data-price="180">Order Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- Dish 4 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="./images/ball.jpg" class="card-img-top" alt="Spaghetti Carbonara">
+            <div class="card-body">
+              <h5 class="card-title">Spaghetti Carbonara</h5>
+              <p class="card-text">Pasta in a rich egg-based sauce with pancetta and Parmesan.</p>
+              <p><strong>Price: ₹270</strong></p>
+              <button class="btn btn-danger order-now" data-price="270">Order Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- Dish 5 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="./images/fish.jpg" class="card-img-top" alt="Grilled Salmon">
+            <div class="card-body">
+              <h5 class="card-title">Grilled Salmon</h5>
+              <p class="card-text">Perfectly grilled salmon with fresh vegetables and lemon butter sauce.</p>
+              <p><strong>Price: ₹450</strong></p>
+              <button class="btn btn-danger order-now" data-price="450">Order Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- Dish 6 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="./images/chicken2.jpg" class="card-img-top" alt="Beef Steak">
+            <div class="card-body">
+              <h5 class="card-title">Beef Steak</h5>
+              <p class="card-text">Juicy steak served with mashed potatoes and grilled vegetables.</p>
+              <p><strong>Price: ₹550</strong></p>
+              <button class="btn btn-danger order-now" data-price="550">Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Payment Section -->
+  <section id="payment" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">💳 Payment Details</h2>
+      <div class="payment-section">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Cardholder Name</label>
+            <input type="text" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Card Number</label>
+            <input type="text" class="form-control" required maxlength="16">
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label class="form-label">Expiry Date</label>
+              <input type="text" class="form-control" required placeholder="MM/YY">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">CVV</label>
+              <input type="password" class="form-control" required maxlength="3">
+            </div>
+          </div>
+          <h4 class="text-center mt-3">Total Amount: ₹<span id="totalAmount">0</span></h4>
+          <div class="text-center">
+            <button type="submit" class="btn btn-success">Proceed to Payment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-danger text-white text-center py-4">
+    <p>&copy; 2025 Restaurant Name. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    let totalAmount = 0;
+    document.querySelectorAll('.order-now').forEach(button => {
+      button.addEventListener('click', function () {
+        totalAmount += parseInt(this.dataset.price);
+        document.getElementById('totalAmount').textContent = totalAmount;
+        alert("Item added! Proceed to Payment section.");
+      });
+    });
+  </script>
+
+</body>
+</html>
